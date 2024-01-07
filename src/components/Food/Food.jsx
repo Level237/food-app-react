@@ -21,7 +21,7 @@ const Food=()=>{
                      img={food.img}/>
                 })}
             </div>
-            {fdCtx.onShowModal && <ShoWFood selectedFood={fdCtx.showFood}/>}
+            {fdCtx.onShowModal && <ShoWFood onClose={fdCtx.onClose} selectedFood={fdCtx.showFood}/>}
         </>
     )
 }

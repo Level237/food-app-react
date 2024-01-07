@@ -4,7 +4,7 @@ const FoodDetails=(props)=>{
         <>
         <div onClick={props.onClick} className="w-full pb-6 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     
-                        <img src={props.img} className="p-8 rounded-t-lg"  alt="product image" />
+                        <img src={props.img} className="p-8 rounded-t-lg"  alt={props.name} />
                     
                     <div className="px-5 pb-5">
                         <a href="#">

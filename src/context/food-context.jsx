@@ -5,6 +5,7 @@ const FoodContext=React.createContext({
     foodList:foods,
     selectFood:(id)=>{},
     onShowModal:false,
+    onClose:()=>{},
     showFood:null
 })
 
@@ -18,7 +19,15 @@ export const FoodContextProvider=(props)=>{
         setShowModal(true)
         setSelectedFood(selectFood)
     }
-    return <FoodContext.Provider value={{ onShowModal:showModal, foodList:foodList,selectFood:selectFood,showFood:selectedFood }}>{props.children}</FoodContext.Provider>
+    const onClose=()=>{
+        setShowModal(false)
+    }
+    return <FoodContext.Provider value={{ 
+        onShowModal:showModal, 
+        foodList:foodList,
+        selectFood:selectFood,
+        showFood:selectedFood,
+    onClose:onClose }}>{props.children}</FoodContext.Provider>
 }
 
 export default FoodContext
