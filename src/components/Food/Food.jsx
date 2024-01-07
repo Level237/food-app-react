@@ -8,7 +8,7 @@ import ShoWFood from "./Show-Food";
 
 const Food=()=>{
     const fdCtx=useContext(FoodContext)
-    console.log(fdCtx)
+    
     return (
         <>
             <div className="grid grid-cols-4 gap-5">
@@ -18,6 +18,7 @@ const Food=()=>{
                      key={food.id} 
                      name={food.name} 
                      price={food.price} 
+                     addToCard={()=>fdCtx.addToCart(food)}
                      img={food.img}/>
                 })}
             </div>
