@@ -8,7 +8,7 @@ import ShoWFood from "./Show-Food";
 
 const Food=()=>{
     const fdCtx=useContext(FoodContext)
-    
+    const [isLoading,setIsLoading]=useState(false)
     return (
         <>
             <div className="grid grid-cols-4 gap-5">
