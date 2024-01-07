@@ -12,12 +12,13 @@ function App() {
   return (
    
    <>
+   
+   <FoodContextProvider>
    <Header/>
    <section className={sectionClasses}>
    <Search/>
    
    </section>
-   <FoodContextProvider>
    <section className='mx-auto container mt-20'>
    <Food/>
    </section>
