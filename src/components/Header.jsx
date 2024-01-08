@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import FoodContext from "../context/food-context";
+import Cart from "./Cart/Cart";
 const Header=()=>{
 
     const fdCtx=useContext(FoodContext)
@@ -15,7 +16,7 @@ const Header=()=>{
             </a>
             <div className="flex items-center lg:order-2">
                
-                <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mb-2">
+                <button onClick={fdCtx.openCart}  class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mb-2">
                 {fdCtx.cart.length >0 && <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{fdCtx.cart.length}</span>}
                 <FaCartArrowDown/>
                 
@@ -52,6 +53,7 @@ Cart
         </div>
     </nav>
 </header>
+{fdCtx.showModalCart && <Cart onClose={fdCtx.onClose} />}
         </>
     )
 }

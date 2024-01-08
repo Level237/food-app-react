@@ -4,6 +4,7 @@ import food1 from "../../img/food1.jpeg"
 import FoodDetails from "./Food-details";
 import FoodContext from "../../context/food-context";
 import ShoWFood from "./Show-Food";
+import Cart from "../Cart/Cart";
 
 
 const Food=()=>{
@@ -22,6 +23,7 @@ const Food=()=>{
                      img={food.img}/>
                 })}
             </div>
+            
             {fdCtx.onShowModal && <ShoWFood onClose={fdCtx.onClose} selectedFood={fdCtx.showFood}/>}
         </>
     )
