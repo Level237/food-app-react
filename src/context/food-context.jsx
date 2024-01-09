@@ -26,10 +26,7 @@ export const FoodContextProvider=(props)=>{
         const notExistingFood=cart.filter((item)=>{
             return item.id!==food.id
         })
-        let cartArray=[]
-        
         setCart(notExistingFood)
-        return notExistingFood;
     }
     const selectFood=(id)=>{
         const selectFood=foodList.find((food)=>food.id===id)
