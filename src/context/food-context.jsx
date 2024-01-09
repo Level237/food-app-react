@@ -11,7 +11,8 @@ const FoodContext=React.createContext({
     showFood:null,
     openCart:null,
     closeCard:null,
-    showModalCart:false
+    showModalCart:false,
+    removeCart:(food)=>{}
 })
 
 export const FoodContextProvider=(props)=>{
@@ -21,6 +22,15 @@ export const FoodContextProvider=(props)=>{
     const [showModalCart,setShowModalCart]=useState(false)
     const [cart,setCart]=useState([])
 
+    const removeCart=(food)=>{
+        const notExistingFood=cart.filter((item)=>{
+            return item.id!==food.id
+        })
+        let cartArray=[]
+        
+        setCart(notExistingFood)
+        return notExistingFood;
+    }
     const selectFood=(id)=>{
         const selectFood=foodList.find((food)=>food.id===id)
         setShowModal(true)
@@ -64,6 +74,7 @@ export const FoodContextProvider=(props)=>{
         openCart:openCart,
         closeCard:closeCart,
         cart:cart,
+        removeCart,
     onClose:onClose }}>{props.children}</FoodContext.Provider>
 }
 
