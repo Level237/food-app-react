@@ -35,7 +35,7 @@ const Cart=()=>{
     </div>
             </div>
         })}
-        
+        {fdCtx.cart.length===0 && <p className="text-center">Empty Card</p>}
             </section>
            
         </Card>
