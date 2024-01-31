@@ -1,10 +1,10 @@
 import Input from "./Ui/Input"
-
+import classes from '../App.module.css';
 const Search=()=>{
-
+    const sectionClasses=` mx-auto mt-40 ${classes.width}`;
     return (
         <>
-    
+    <section className={sectionClasses}>
                 <form>   
             <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div className="relative">
@@ -18,7 +18,7 @@ const Search=()=>{
             </div>
         </form>
   
-
+        </section>
 
         </>
     )
