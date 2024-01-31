@@ -16,7 +16,7 @@ const FoodContext=React.createContext({
 })
 
 export const FoodContextProvider=(props)=>{
-    const [foodList,setFoodList]=useState(foods)
+    const [foodList]=useState(foods)
     const [selectedFood,setSelectedFood]=useState(null)
     const [showModal,setShowModal]=useState(false)
     const [showModalCart,setShowModalCart]=useState(false)

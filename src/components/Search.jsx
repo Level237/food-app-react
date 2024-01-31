@@ -1,4 +1,4 @@
-import Input from "./Ui/Input"
+
 import classes from '../App.module.css';
 const Search=()=>{
     const sectionClasses=` mx-auto mt-40 ${classes.width}`;
