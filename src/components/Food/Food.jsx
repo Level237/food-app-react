@@ -7,7 +7,8 @@ import ShoWFood from "./Show-Food";
 import Cart from "../Cart/Cart";
 
 
-const Food=()=>{
+const Food=({foods})=>{
+   console.log(foods);
     const fdCtx=useContext(FoodContext)
     const [isLoading,setIsLoading]=useState(false)
     return (

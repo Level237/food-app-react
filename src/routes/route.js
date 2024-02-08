@@ -5,6 +5,7 @@ import FoodPage from "../pages/FoodPage";
 import NewFoodPage from "../pages/NewFoodPage";
 import { addFoodAction } from "./actions/addFoodAction";
 import ErrorPage from "../pages/Error";
+import { loader as LoaderFoods } from "./loader/LoaderFoods";
 
 export const routes=createBrowserRouter([
     {
@@ -16,6 +17,7 @@ export const routes=createBrowserRouter([
                 path:"",
                 element:<Homepage/>,
                 index:true,
+               loader:LoaderFoods
             },{
                 path:"foods",
                 element:<FoodPage/>
