@@ -20,7 +20,7 @@ const Cart=()=>{
             return <div className="flex  justify- mt-5">
             <figure class="max-w-lg flex-none">
             <span class="absolute bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">{item.category}</span>
-      <img class="flex-none w-50 h-50  rounded-lg" src={item.img} alt="image description"/>
+      <img class="flex-none w-50 h-50  rounded-lg" src={item.url} alt="image description"/>
     </figure>
     <div className="flex flex-col flex-initial w-64 mx-4">
         <div>

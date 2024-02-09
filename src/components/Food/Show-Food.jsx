@@ -6,7 +6,7 @@ const ShoWFood=(props)=>{
     return (
 <Card>
 
-        <img src={props.selectedFood.img} className=" w-100 p-8 rounded-t-lg"  alt={props.selectedFood.name} />
+        <img src={props.selectedFood.url} className=" w-100 p-8 rounded-t-lg"  alt={props.selectedFood.name} />
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                 <h3 className=" text-center text-xl font-semibold text-gray-900 dark:text-white">
                     {props.selectedFood.name}

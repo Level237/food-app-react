@@ -8,16 +8,19 @@ import Cart from "../Cart/Cart";
 
 
 const Food=({foods})=>{
-   console.log(foods);
+
     const fdCtx=useContext(FoodContext)
     const [isLoading,setIsLoading]=useState(false)
+    fdCtx.setFoodList(foods)
+    console.log(fdCtx.foodList);
     return (
         <>
             <div className="grid grid-cols-4 gap-5">
                 {foods.map((food)=>{
                     return <FoodDetails 
                     onClick={()=>fdCtx.selectFood(food.id)}
-                     key={food.id} 
+                     key={food.id}
+                     id={food.id} 
                      name={food.name} 
                      price={food.price} 
                      addToCard={()=>fdCtx.addToCart(food)}

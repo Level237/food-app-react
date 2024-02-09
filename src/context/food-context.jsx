@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import foods from "../data/foods";
+import { loadFoods } from "../routes/loader/LoaderFoods";
 
+const ListFood=loadFoods();
 const FoodContext=React.createContext({
-    foodList:foods,
+    foodList:ListFood,
+    setFoodList:[],
     selectFood:(id)=>{},
     onShowModal:false,
     onClose:()=>{},
@@ -16,7 +19,7 @@ const FoodContext=React.createContext({
 })
 
 export const FoodContextProvider=(props)=>{
-    const [foodList]=useState(foods)
+    const [foodList,setFoodList]=useState(null)
     const [selectedFood,setSelectedFood]=useState(null)
     const [showModal,setShowModal]=useState(false)
     const [showModalCart,setShowModalCart]=useState(false)
@@ -31,6 +34,7 @@ export const FoodContextProvider=(props)=>{
     const selectFood=(id)=>{
         const selectFood=foodList.find((food)=>food.id===id)
         setShowModal(true)
+        
         setSelectedFood(selectFood)
     }
     const onClose=()=>{
@@ -65,6 +69,7 @@ export const FoodContextProvider=(props)=>{
         onShowModal:showModal, 
         showModalCart:showModalCart, 
         foodList:foodList,
+        setFoodList,
         selectFood:selectFood,
         showFood:selectedFood,
         addToCart:addToCart,

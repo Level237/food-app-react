@@ -7,24 +7,7 @@ const Homepage=()=>{
     const {foods}=useLoaderData()
     
     //console.log(data)
-    useEffect(()=>{
-
-        
-    async function fetchData(){
-        const response=await fetch("https://food-15762-default-rtdb.firebaseio.com/foods.json");
-        const resData= await response.json();
-        const data=[];
-        for(let key in resData){
-            data.push({
-                name:resData[key].name
-            })
-        }
-       return resData;
-        
-    }
-    fetchData()
    
-    })
     return(
         <>
         <section>
