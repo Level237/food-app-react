@@ -5,10 +5,10 @@ import FoodDetails from "./Food-details";
 import FoodContext from "../../context/food-context";
 import ShoWFood from "./Show-Food";
 import Cart from "../Cart/Cart";
-
+import {useLoaderData} from "react-router-dom"
 
 const Food=({foods})=>{
-
+    const {foodDetail}=useLoaderData()
     const fdCtx=useContext(FoodContext)
     const [isLoading,setIsLoading]=useState(false)
     fdCtx.setFoodList(foods)

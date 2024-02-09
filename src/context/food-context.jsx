@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import foods from "../data/foods";
-import { loadFoods } from "../routes/loader/LoaderFoods";
 
-const ListFood=loadFoods();
+
+
 const FoodContext=React.createContext({
-    foodList:ListFood,
+    foodList:null,
     setFoodList:[],
     selectFood:(id)=>{},
     onShowModal:false,
@@ -67,7 +67,7 @@ export const FoodContextProvider=(props)=>{
     }
     return <FoodContext.Provider value={{ 
         onShowModal:showModal, 
-        showModalCart:showModalCart, 
+        showModalCart:showModalCart,
         foodList:foodList,
         setFoodList,
         selectFood:selectFood,

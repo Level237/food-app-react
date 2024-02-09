@@ -5,13 +5,15 @@ import FoodPage from "../pages/FoodPage";
 import NewFoodPage from "../pages/NewFoodPage";
 import { addFoodAction } from "./actions/addFoodAction";
 import ErrorPage from "../pages/Error";
-import { loader as LoaderFoods } from "./loader/LoaderFoods";
+import { loader as LoaderFoods, loadFoods } from "./loader/LoaderFoods";
+import { loaderFoodDetail } from "./loader/LoaderFoodDetail";
 
 export const routes=createBrowserRouter([
     {
         path:'/',
         element:<RootLayout/>,
         errorElement:<ErrorPage/>,
+        //loader:loaderFoodDetail,
         children:[
             {
                 path:"",
