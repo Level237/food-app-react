@@ -20,7 +20,8 @@ export const routes=createBrowserRouter([
                loader:LoaderFoods
             },{
                 path:"foods",
-                element:<FoodPage/>
+                element:<FoodPage/>,
+                loader:LoaderFoods
             },{
                 path:"food/new",
                 element:<NewFoodPage/>,

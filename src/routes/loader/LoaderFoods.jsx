@@ -5,7 +5,11 @@ async function loadFood(){
     const data=[];
     for(let key in resData){
         data.push({
-            name:resData[key].name
+            name:resData[key].name,
+            category:resData[key].category,
+            description:resData[key].description,
+            url:resData[key].url,
+            price:resData[key].price
         })
     }
    return data;

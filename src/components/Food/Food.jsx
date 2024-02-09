@@ -14,14 +14,14 @@ const Food=({foods})=>{
     return (
         <>
             <div className="grid grid-cols-4 gap-5">
-                {fdCtx.foodList.map((food)=>{
+                {foods.map((food)=>{
                     return <FoodDetails 
                     onClick={()=>fdCtx.selectFood(food.id)}
                      key={food.id} 
                      name={food.name} 
                      price={food.price} 
                      addToCard={()=>fdCtx.addToCart(food)}
-                     img={food.img}/>
+                     url={food.url}/>
                 })}
             </div>
             
