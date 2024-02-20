@@ -1,0 +1,10 @@
+.c-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.w-flex1{
+    width: 250px;
+}
