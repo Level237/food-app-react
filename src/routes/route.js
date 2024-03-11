@@ -7,6 +7,7 @@ import { addFoodAction } from "./actions/addFoodAction";
 import ErrorPage from "../pages/Error";
 import { loader as LoaderFoods, loadFoods } from "./loader/LoaderFoods";
 import { loaderFoodDetail } from "./loader/LoaderFoodDetail";
+import AnimatePage from "../pages/AnimatePage"
 
 export const routes=createBrowserRouter([
     {
@@ -28,6 +29,9 @@ export const routes=createBrowserRouter([
                 path:"food/new",
                 element:<NewFoodPage/>,
                 action:addFoodAction
+            },{
+                path:'animate-test',
+                element:<AnimatePage/>
             }
         ]
     }

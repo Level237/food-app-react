@@ -56,6 +56,11 @@ Cart
                     <li>
                         <NavLink to="food/new"  className={({isActive})=>(isActive ? activeCss :notActiveCss)}>New Food</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="animate-test"  className={({isActive})=>(isActive ? activeCss :notActiveCss)}>Animate</NavLink>
+                    </li>
+                    
+
                     
                 </ul>
             </div>
